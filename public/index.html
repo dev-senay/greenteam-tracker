@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTeam Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="icon" href="/icons/icon-192.png">
+</head>
+
+<body>
+    <header>
+        <h1>🌱 <span data-i18n="title"></span></h1>
+        <button id="langBtn" class="btn-small" type="button"></button>
+    </header>
+
+    <div class="container login-box">
+        <form class="card" id="loginForm">
+            <label for="email" data-i18n="email"></label>
+            <input id="email" type="email" autocomplete="username" required>
+
+            <label for="password" data-i18n="password"></label>
+            <input id="password" type="password" autocomplete="current-password" required>
+
+            <button class="btn-full" type="submit" data-i18n="login"></button>
+            <p class="error" id="error"></p>
+        </form>
+    </div>
+
+    <script type="module" src="/js/login.js"></script>
+</body>
+
+</html>

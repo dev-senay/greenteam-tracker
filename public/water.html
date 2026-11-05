@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTeam Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="icon" href="/icons/icon-192.png">
+</head>
+
+<body>
+    <header>
+        <h1>💧 <span data-i18n="log_watering"></span></h1>
+        <div>
+            <button id="langBtn" class="btn-small" type="button"></button>
+            <a class="btn-small" href="/dashboard.html" data-i18n="back"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <form class="card" id="waterForm">
+            <label for="plantSearch" data-i18n="plant"></label>
+            <input id="plantSearch" type="search" autocomplete="off">
+            <select id="plantSelect" size="5" style="margin-top:8px"></select>
+
+            <label for="memberSelect" data-i18n="watered_by"></label>
+            <select id="memberSelect"></select>
+
+            <label for="health" data-i18n="health"></label>
+            <select id="health"></select>
+
+            <label for="note" data-i18n="note"></label>
+            <textarea id="note" maxlength="500"></textarea>
+
+            <label for="photo" data-i18n="photo"></label>
+            <input id="photo" type="file" accept="image/*" capture="environment">
+            <img id="preview" alt="">
+
+            <button class="btn-full" type="submit" id="saveBtn" data-i18n="save"></button>
+            <p class="error" id="error"></p>
+            <p class="success" id="success"></p>
+            <p class="success" id="pending"></p>
+        </form>
+    </div>
+
+    <script type="module" src="/js/water.js"></script>
+</body>
+
+</html>

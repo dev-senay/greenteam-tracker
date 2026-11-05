@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTeam Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="icon" href="/icons/icon-192.png">
+</head>
+
+<body>
+    <header>
+        <h1>🌱 <span id="who"></span></h1>
+        <div>
+            <button id="langBtn" class="btn-small" type="button"></button>
+            <button id="logoutBtn" class="btn-small" type="button" data-i18n="logout"></button>
+        </div>
+    </header>
+    <a id="waterLink" class="btn-small" href="/water.html" hidden data-i18n="log_watering"></a>
+
+    <div class="container">
+        <div class="card stats">
+            <div class="stat"><b id="statTotal">0</b><span data-i18n="total"></span></div>
+            <div class="stat orange"><b id="statOverdue">0</b><span data-i18n="overdue"></span></div>
+            <div class="stat red"><b id="statCritical">0</b><span data-i18n="critical"></span></div>
+        </div>
+
+        <div class="card">
+            <h3 data-i18n="overdue_list"></h3>
+            <div id="overdueList"></div>
+        </div>
+
+        <div class="card">
+            <h3 data-i18n="all_plants"></h3>
+            <div class="toolbar">
+                <select id="groupFilter" hidden></select>
+                <select id="statusFilter"></select>
+            </div>
+            <div id="plantList"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/dashboard.js"></script>
+</body>
+
+</html>

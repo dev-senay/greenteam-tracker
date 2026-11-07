@@ -1,5 +1,8 @@
 const TEXT = {
     en: {
+        view_public: 'View without login',
+        read_only: 'View only. Leaders log in to record waterings.',
+        choose_group: 'Choose a group',
         saved_offline: 'No internet. Saved on this phone and will be sent automatically.',
         pending: 'waiting to be sent',
         synced: 'Sent from offline storage:',
@@ -40,6 +43,9 @@ const TEXT = {
         network: 'Cannot reach the server'
     },
     am: {
+        view_public: 'ያለ መግቢያ ተመልከት',
+        read_only: 'ለመመልከት ብቻ ነው። መሪዎች ለመመዝገብ ይግቡ።',
+        choose_group: 'ቡድን ይምረጡ',
         saved_offline: 'ኢንተርኔት የለም። በዚህ ስልክ ላይ ተቀምጧል፣ ሲመለስ በራሱ ይላካል።',
         pending: 'ለመላክ በመጠባበቅ ላይ',
         synced: 'ከጊዜያዊ ማከማቻ የተላኩ፦',

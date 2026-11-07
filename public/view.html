@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTeam Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🌱 <span data-i18n="title"></span></h1>
+        <div>
+            <button id="langBtn" class="btn-small" type="button"></button>
+            <a class="btn-small" href="/index.html" data-i18n="login"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <p data-i18n="read_only"></p>
+
+        <div class="card">
+            <h3 data-i18n="group_report"></h3>
+            <div style="overflow-x:auto">
+                <table id="reportTable"></table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 data-i18n="all_plants"></h3>
+            <div class="toolbar">
+                <select id="groupSelect"></select>
+                <select id="statusFilter"></select>
+            </div>
+            <div id="plantList"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/view.js"></script>
+</body>
+
+</html>

@@ -15,6 +15,7 @@ import cron from 'node-cron';
 import reportsRouter from './routes/reports.js';
 import cronRouter from './routes/cron.js';
 import { sendOverdueReminders } from './utils/reminders.js';
+import publicRouter from './routes/public.js';
 
 const app = express();
 app.set('trust proxy', 1); // Render sits behind a proxy
@@ -29,7 +30,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
-
+app.use('/api/public', publicRouter);   // read-only, no login
 app.use('/api/auth', authRouter);                       // public
 app.use('/api/groups', requireAuth, groupsRouter);      // login required
 app.use('/api/plants', requireAuth, plantsRouter);
